@@ -10,7 +10,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-NEWS_PROVIDER = os.getenv("NEWS_PROVIDER", "gnews").lower()  # "gnews" or "newsapi"
 NEWS_API_KEY = os.getenv("NEWS_API_KEY", "")
 FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
 
