@@ -1,0 +1,266 @@
+.dg-page {
+  min-height: 100vh;
+}
+
+.dg-ticker-bar {
+  display: flex;
+  align-items: center;
+  background: var(--ink-deep);
+  border-bottom: 1px solid var(--rule-light);
+  overflow: hidden;
+}
+.dg-ticker-label {
+  flex-shrink: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  background: var(--wire-amber);
+  padding: 8px 12px;
+}
+.dg-ticker-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+.dg-ticker-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: dg-scroll 32s linear infinite;
+}
+.dg-ticker-item {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  color: #b7bacb;
+  padding: 8px 28px 8px 0;
+}
+@keyframes dg-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.dg-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.dg-masthead-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.dg-edition {
+  color: var(--wire-amber);
+}
+.dg-wordmark {
+  font-family: "Newsreader", serif;
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 64px);
+  color: var(--text-paper);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.dg-rule {
+  height: 2px;
+  background: var(--rule-dark);
+  margin-top: 14px;
+}
+
+.dg-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.dg-search {
+  flex: 1;
+  min-width: 200px;
+  background: #232538;
+  border: 1px solid var(--rule-dark);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--text-paper);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+.dg-search::placeholder {
+  color: var(--text-muted);
+}
+.dg-select {
+  background: #232538;
+  border: 1px solid var(--rule-dark);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--text-paper);
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+}
+.dg-saved-toggle {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  color: #b7bacb;
+  background: transparent;
+  border: 1px solid var(--rule-dark);
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.dg-saved-toggle.active {
+  color: var(--ink);
+  background: var(--wire-amber);
+  border-color: var(--wire-amber);
+}
+.dg-refresh {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--signal-teal);
+  border: 1px solid var(--signal-teal);
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.dg-refresh:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.dg-pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.dg-pill {
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: #b7bacb;
+  border: 1px solid var(--rule-dark);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  text-transform: capitalize;
+}
+.dg-pill.active {
+  color: var(--ink);
+  background: var(--signal-teal);
+  border-color: var(--signal-teal);
+}
+
+.dg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.dg-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 0 4px 0 rgba(27, 29, 42, 0.9);
+  border-radius: 4px;
+  padding: 16px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.dg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(27, 29, 42, 0.9);
+}
+.dg-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.dg-cat-tag {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-paper);
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  background: var(--signal-teal);
+}
+.dg-star {
+  cursor: pointer;
+  color: #c9c3b0;
+  transition: transform 0.12s ease;
+  font-size: 18px;
+  background: none;
+  border: none;
+}
+.dg-star:active {
+  transform: scale(0.85);
+}
+.dg-star.saved {
+  color: var(--wire-amber);
+}
+.dg-card-title {
+  font-family: "Newsreader", serif;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.dg-card-snippet {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-body);
+  margin: 0 0 14px;
+  flex: 1;
+}
+.dg-card-meta {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: #6b6e80;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dg-card-source {
+  font-weight: 700;
+}
+
+.dg-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #b7bacb;
+}
+.dg-state-title {
+  font-family: "Newsreader", serif;
+  font-size: 22px;
+  color: var(--text-paper);
+  margin-bottom: 6px;
+}
+.dg-state-body {
+  font-size: 14px;
+}
+
+.dg-footer {
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule-light);
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  color: #6b6e80;
+  text-align: center;
+}

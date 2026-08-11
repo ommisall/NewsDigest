@@ -1,0 +1,43 @@
+:root {
+  --ink: #1b1d2a;
+  --ink-deep: #14161f;
+  --paper: #edeae2;
+  --wire-amber: #d9a441;
+  --signal-teal: #3e7c7b;
+  --rule-dark: #4a4d5e;
+  --rule-light: #33364a;
+  --text-paper: #f7f5f0;
+  --text-muted: #8a8d9e;
+  --text-body: #4a4d5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rule-dark);
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dg-ticker-track {
+    animation: none !important;
+  }
+}
