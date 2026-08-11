@@ -1,17 +1,3 @@
-"""
-News Digest backend
---------------------
-A small FastAPI service that fetches headlines from a news API
-(GNews or NewsAPI.org — you choose via .env) and serves them to the
-React frontend in a clean, consistent shape, with a short in-memory
-cache so you don't burn through your API quota on every page refresh.
-
-Run:
-    pip install -r requirements.txt
-    cp .env.example .env   # then fill in your API key
-    uvicorn main:app --reload --port 8000
-"""
-
 import os
 import time
 from typing import Optional
